@@ -1,0 +1,19 @@
+name: Spectacles
+version: 0.1
+author: Asien
+
+main: com.gmail.asienpanda.Spectacles.Spectacles
+ 
+commands:
+   spectacles:
+     description: Find or create spectacles!
+     usage: /<command> <create/remove/tour>
+   tour:
+     description: Find spectacles.
+     usage: /<command> 
+ 
+permissions:
+   spectacles.create: 
+     description: Gives access to wand and creation of new spectacles
+   spectacles.tour:
+     description: Lets you see what spectacles you have discovered already
