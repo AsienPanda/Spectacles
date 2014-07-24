@@ -4,12 +4,12 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Set;
 
 import org.bukkit.configuration.ConfigurationSection;
 
 public class SpectaclesStore {
 
+    @SuppressWarnings("unchecked")
     public static HashMap<String, ArrayList<String>> load(String path) {
         Object result = null;
         BufferedReader br = null;

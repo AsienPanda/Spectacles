@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.gmail.asienpanda</groupId>
 	<artifactId>Spectacles</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>v1.2.1</version>
 	<build>
 		<plugins>
 			<plugin>

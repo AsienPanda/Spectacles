@@ -14,11 +14,10 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerLoginEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.material.MaterialData;
+
 
 public class SpectaclesListener implements Listener {
 
@@ -40,6 +39,7 @@ public class SpectaclesListener implements Listener {
     }
 
     // Select the Spectacle region
+    @SuppressWarnings("deprecation")
     @EventHandler
     public void onPlayerInteractEvent(PlayerInteractEvent event) {
         Player p = event.getPlayer();
@@ -62,6 +62,7 @@ public class SpectaclesListener implements Listener {
 
     }
 
+    @SuppressWarnings("deprecation")
     @EventHandler
     public void onPlayerMoveEvent(PlayerMoveEvent event) {
        
@@ -72,8 +73,6 @@ public class SpectaclesListener implements Listener {
             int x = loc.getBlockX();
             int y = loc.getBlockY();
             int z = loc.getBlockZ();
-            World currentWorld = loc.getWorld();
-
             // get config, then in the path for Regions, get the keys (each
             // region)
             // Loop for every value to check
@@ -83,7 +82,7 @@ public class SpectaclesListener implements Listener {
                     .getConfig().getConfigurationSection("Regions")
                     .getKeys(false).iterator(); iterator.hasNext();) {
                 String regionNameKey = (iterator.next());
-                Map coordMap = Spectacles.getInstance().getConfig()
+                Map<String, Object> coordMap = Spectacles.getInstance().getConfig()
                         .getConfigurationSection("Regions." + regionNameKey)
                         .getValues(false);
                 int x1 = (int) coordMap.get("x1");

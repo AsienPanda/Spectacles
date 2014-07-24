@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.UUID;
 
 import org.bukkit.Location;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -36,7 +35,7 @@ public final class Spectacles extends JavaPlugin {
         saveDefaultConfig();
         cfile = new File(getDataFolder(), "config.yml");
         toolID = config.getInt("Wand ID");
-        
+
         String path = getDataFolder() + File.separator + "playerdata.bin";
         
         playerDataFile = new File(path);

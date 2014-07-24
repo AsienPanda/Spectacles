@@ -19,17 +19,17 @@ public class SpectaclesRegion
     public void create()
     {
         
-        SpectaclesListener.instance.config.set("Regions" + "." + regionName + ".World", firstLoc.getWorld().getName());
-        SpectaclesListener.instance.config.set("Regions" + "." + regionName + ".x1", firstLoc.getBlockX());
-        SpectaclesListener.instance.config.set("Regions" + "." + regionName + ".y1", firstLoc.getBlockY());
-        SpectaclesListener.instance.config.set("Regions" + "." + regionName + ".z1", firstLoc.getBlockZ());
+        Spectacles.config.set("Regions" + "." + regionName + ".World", firstLoc.getWorld().getName());
+        Spectacles.config.set("Regions" + "." + regionName + ".x1", firstLoc.getBlockX());
+        Spectacles.config.set("Regions" + "." + regionName + ".y1", firstLoc.getBlockY());
+        Spectacles.config.set("Regions" + "." + regionName + ".z1", firstLoc.getBlockZ());
         
-        SpectaclesListener.instance.config.set("Regions" + "." + regionName + ".x2", secondLoc.getBlockX());
-        SpectaclesListener.instance.config.set("Regions" + "." + regionName + ".y2", secondLoc.getBlockY());
-        SpectaclesListener.instance.config.set("Regions" + "." + regionName + ".z2", secondLoc.getBlockZ());
+        Spectacles.config.set("Regions" + "." + regionName + ".x2", secondLoc.getBlockX());
+        Spectacles.config.set("Regions" + "." + regionName + ".y2", secondLoc.getBlockY());
+        Spectacles.config.set("Regions" + "." + regionName + ".z2", secondLoc.getBlockZ());
         
         SpectaclesListener.instance.saveConfig();
-        SpectaclesListener.instance.places.add(regionName);
+        Spectacles.places.add(regionName);
         
      } 
         
